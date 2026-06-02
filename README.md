@@ -1,8 +1,10 @@
 # TikTok Export Downloader
 
-Download your TikTok videos from a [TikTok data export](https://support.tiktok.com/en/account-and-privacy/personalized-ads-and-data/requesting-your-data) (`Posts.txt` or `user_data.json`).
+Batch-download every video from your [official TikTok data export](https://support.tiktok.com/en/account-and-privacy/personalized-ads-and-data/requesting-your-data)—useful for backing up your account, saving private posts, or recovering videos if you still have (or can request) an export after a ban.
 
-The export file contains direct CDN links to each video. This script reads those links and saves MP4 files locally, using the **post date** in each filename.
+The export includes direct CDN links in `Posts.txt` or `user_data.json`. This tool downloads them as MP4 files on your computer, named with each video’s **post date**.
+
+**Try it in the browser (no upload):** [Live demo](https://nimitamishra.github.io/tiktok_videos_downloader/) · or use the Python CLI below.
 
 ## Example filenames
 
@@ -77,17 +79,13 @@ The [`docs/`](docs/) folder is a **static, browser-only** helper for your portfo
 2. The page shows how many videos were found and sample filenames.
 3. User downloads a generated `download_my_tiktok_videos.py` and runs it locally.
 
-**Live demo:** enable GitHub Pages (Settings → Pages → branch `main`, folder `/docs`).
+**Live demo:** https://nimitamishra.github.io/tiktok_videos_downloader/
 
-See [docs/EMBED.md](docs/EMBED.md) for how to copy it onto your personal site.
+See [docs/EMBED.md](docs/EMBED.md) to embed this on your portfolio site.
 
 ```bash
 cd docs && python3 -m http.server 8080
 ```
-
-## What not to commit
-
-Your TikTok export contains personal data and short-lived signed URLs. This repo's `.gitignore` excludes typical export folders and downloaded videos. Only push the script, `requirements.txt`, and this README unless you intentionally want to share export data.
 
 ## License
 
