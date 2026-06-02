@@ -84,7 +84,7 @@ Names look like: TikTok video - 2025-04-05 at 01-36-32.mp4
 Tip: pip install certifi  (if you see SSL errors on Mac)
 Links expire — use a fresh TikTok data export if you get HTTP 403.
 
-CLI repo: https://github.com/nimitamishra/tiktok-export-downloader`;
+CLI repo: https://github.com/nimitamishra/tiktok_videos_downloader`;
 }
 
 dropzone.addEventListener("click", () => fileInput.click());

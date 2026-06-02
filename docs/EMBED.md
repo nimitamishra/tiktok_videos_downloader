@@ -1,6 +1,6 @@
 # Adding this to your portfolio site
 
-Copy the entire `web/` folder into your site, e.g.:
+Copy the entire `docs/` folder into your site, e.g.:
 
 ```text
 your-site/
@@ -19,14 +19,17 @@ your-site/
 ### Local preview
 
 ```bash
-cd web
+cd docs
 python3 -m http.server 8080
 # open http://localhost:8080
 ```
 
-### GitHub Pages (same repo)
+## GitHub Pages (this repo)
 
-Enable Pages for the `/web` folder, or move `web/*` to `/docs` and set Pages source to `/docs`.
+1. Push to GitHub.
+2. **Settings → Pages →** Source: **Deploy from a branch**
+3. Branch: **main**, folder: **/docs**
+4. Site URL: `https://YOUR_USERNAME.github.io/tiktok_videos_downloader/`
 
 ## Customize
 

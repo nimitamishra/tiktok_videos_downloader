@@ -21,8 +21,8 @@ If two posts share the exact same timestamp, the second gets a numeric suffix: `
 ## Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/tiktok-export-downloader.git
-cd tiktok-export-downloader
+git clone https://github.com/nimitamishra/tiktok_videos_downloader.git
+cd tiktok_videos_downloader
 python3 -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
@@ -71,16 +71,18 @@ Failed downloads are logged to `downloaded_videos/download_failures.txt`.
 
 ## Web tool (client-side)
 
-The [`web/`](web/) folder is a **static, browser-only** helper for your portfolio or GitHub Pages:
+The [`docs/`](docs/) folder is a **static, browser-only** helper for your portfolio or GitHub Pages:
 
 1. User drags in `Posts.txt` or `user_data.json` (never uploaded anywhere).
 2. The page shows how many videos were found and sample filenames.
 3. User downloads a generated `download_my_tiktok_videos.py` and runs it locally.
 
-See [web/EMBED.md](web/EMBED.md) for how to copy it onto your personal site.
+**Live demo:** enable GitHub Pages (Settings → Pages → branch `main`, folder `/docs`).
+
+See [docs/EMBED.md](docs/EMBED.md) for how to copy it onto your personal site.
 
 ```bash
-cd web && python3 -m http.server 8080
+cd docs && python3 -m http.server 8080
 ```
 
 ## What not to commit
