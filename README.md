@@ -69,6 +69,20 @@ python3 download_posts.py ~/Downloads/tiktok_export/user_data.json -o ~/Videos/T
 
 Failed downloads are logged to `downloaded_videos/download_failures.txt`.
 
+## Web tool (client-side)
+
+The [`web/`](web/) folder is a **static, browser-only** helper for your portfolio or GitHub Pages:
+
+1. User drags in `Posts.txt` or `user_data.json` (never uploaded anywhere).
+2. The page shows how many videos were found and sample filenames.
+3. User downloads a generated `download_my_tiktok_videos.py` and runs it locally.
+
+See [web/EMBED.md](web/EMBED.md) for how to copy it onto your personal site.
+
+```bash
+cd web && python3 -m http.server 8080
+```
+
 ## What not to commit
 
 Your TikTok export contains personal data and short-lived signed URLs. This repo's `.gitignore` excludes typical export folders and downloaded videos. Only push the script, `requirements.txt`, and this README unless you intentionally want to share export data.

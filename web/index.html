@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Parse your TikTok data export locally and download all your videos. Nothing is uploaded to a server."
+    />
+    <title>TikTok Export Downloader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-repo="https://github.com/nimitamishra/tiktok-export-downloader">
+    <div class="wrap">
+      <span class="badge">Runs in your browser</span>
+      <h1>Download every video from your TikTok export</h1>
+      <p class="lead">
+        Mass-backup your posts, recover videos after a ban, or save private
+        content — using the official TikTok data export. Drop your file here;
+        we’ll build a script you run on your Mac or PC.
+      </p>
+
+      <p class="privacy" id="privacy-note">
+        <strong>Private by design:</strong> your
+        <code>Posts.txt</code> or <code>user_data.json</code> is read only in
+        this tab. Nothing is sent to a server.
+      </p>
+
+      <div id="dropzone" role="button" tabindex="0" aria-label="Upload TikTok export file">
+        <div class="icon" aria-hidden="true">📁</div>
+        <strong>Drop your export file here</strong>
+        <p>or click to choose · <code>Posts.txt</code> or <code>user_data.json</code></p>
+      </div>
+      <input
+        id="file-input"
+        type="file"
+        accept=".txt,.json,application/json,text/plain"
+      />
+      <p class="hint">
+        Find it inside your TikTok ZIP → usually <code>Posts/Posts.txt</code>
+      </p>
+
+      <div id="error" hidden></div>
+
+      <section id="results" hidden>
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-label">Videos found</div>
+            <div class="stat-value" id="video-count">0</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Post dates</div>
+            <div class="stat-value small" id="date-range">—</div>
+          </div>
+        </div>
+
+        <div class="samples">
+          <h3>Example filenames</h3>
+          <ul id="sample-list"></ul>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn-primary" id="btn-download-script" disabled>
+            Download Python script
+          </button>
+          <button type="button" class="btn-secondary" id="btn-copy-steps" disabled>
+            Copy run instructions
+          </button>
+        </div>
+
+        <div class="steps">
+          <strong>Next steps on your computer</strong>
+          <ol>
+            <li>Save the file as <code>download_my_tiktok_videos.py</code></li>
+            <li>Open Terminal (Mac) or Command Prompt (Windows) in that folder</li>
+            <li>Run <code>python3 download_my_tiktok_videos.py</code></li>
+            <li>Videos appear in <code>downloaded_videos/</code></li>
+          </ol>
+          <p>
+            Need the full CLI tool?
+            <a id="github-link" href="https://github.com/nimitamishra/tiktok-export-downloader"
+              >View on GitHub</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>
+          Request a
+          <a
+            href="https://support.tiktok.com/en/account-and-privacy/personalized-ads-and-data/requesting-your-data"
+            target="_blank"
+            rel="noopener noreferrer"
+            >fresh TikTok export</a
+          >
+          — download links expire after a few weeks.
+        </p>
+      </footer>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
