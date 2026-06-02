@@ -1,0 +1,25 @@
+# Personal TikTok export data (do not publish)
+Posts/
+Profile and Settings/
+user_data.json
+*.zip
+
+# Downloaded media and logs
+downloaded_videos/
+*.part
+download_failures.txt
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.Python
+*.egg-info/
+dist/
+build/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
